@@ -18,7 +18,7 @@
 </style>
 
 <svelte:head>
-	<title>Chapters</title>
+	<title>Chapters | Into The Dungeon</title>
 </svelte:head>
 
 <section in:fade>

@@ -42,7 +42,7 @@
 </style>
 
 <svelte:head>
-	<title>Modulo | Into The Dungeon</title>
+  <title>Modulo | Into The Dungeon</title>
 </svelte:head>
 
 <section>
