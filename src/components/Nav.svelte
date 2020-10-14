@@ -1,4 +1,7 @@
 <script>
+  import Icon from 'svelte-awesome/components/Icon.svelte'
+  import { faChessRook } from '@fortawesome/free-solid-svg-icons';
+  import { faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 	export let segment;
 </script>
 
@@ -43,12 +46,12 @@
 </style>
 
 <nav>
-  <a aria-current="{segment === undefined ? 'page' : undefined}" href="."><img src="chess-rook-solid-white.svg" alt="Home"></a>
+  <a aria-current="{segment === undefined ? 'page' : undefined}" href="."><Icon data={faChessRook} label="home"/></a>
 	<ul>
 		<li></li>
-		<li><a  href="https://www.instagram.com/modulomusic/"><img src="instagram-white.svg" alt="Instagram"></a></li>
-		<li><a  href="https://www.youtube.com/channel/UCqxQspCPTcE_wH0KBE5J-aw/"><img src="youtube-white.svg" alt="Youtube"></a></li>
-		<li><a  href="https://twitter.com/code_nutt"><img src="twitter-white.svg" alt="Twitter"></a></li>
+    <li><a  href="https://www.instagram.com/modulomusic/"><Icon data={faInstagram} label="Instagram"/></a></li>
+		<li><a  href="https://www.youtube.com/channel/UCqxQspCPTcE_wH0KBE5J-aw/"><Icon data={faYoutube} label="YouTube"/></a></li>
+		<li><a  href="https://twitter.com/code_nutt"><Icon data={faTwitter} label="Twitter"/></a></li>
     <!-- <li><button><img src="cog-yellow.svg" alt="settings"></button></li> -->
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches

@@ -1,5 +1,9 @@
 <script>
+	import { fade } from 'svelte/transition';
 	import { audioSrc } from '../../store/stores.js';
+  import ChooseAudio from '../../components/ChooseAudio.svelte'
+  import SpotifyPlayer from '../../components/SpotifyPlayer.svelte'
+  import ApplePlayer from '../../components/ApplePlayer.svelte'
   let audio_src;
 
 	const unsubscribe = audioSrc.subscribe(value => {
@@ -17,6 +21,8 @@
 	<title>Chapters</title>
 </svelte:head>
 
+<section in:fade>
+
 <h1>Chapters</h1>
 
 <h2>Prologue</h2>
@@ -25,17 +31,14 @@
 </figure>
 
 {#if $audioSrc === "spotify"}
-  <iframe src="https://open.spotify.com/embed/track/2QmkVQgjxVnRWd9uM7kbbd" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <SpotifyPlayer trackID="2QmkVQgjxVnRWd9uM7kbbd"/>
 {:else if $audioSrc === "apple"}
-  <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="450" style="width:100%;max-width:660px;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/us/album/aquatic-ambience-single/1529096110"></iframe>
+  <ApplePlayer trackID="1533876783"/>
 {:else if $audioSrc === "deezer"}
-  <iframe id="dzplayer" dztype="dzplayer" src="http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=176531862" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" width="700" height="240" allowTransparency="true"></iframe>
+<iframe id="dzplayer" dztype="dzplayer" src="http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=176531862" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" width="700" height="240" allowTransparency="true"></iframe>
 {:else}
-<p>Choose Audio Source</p>
-<ul>
-    <li><button on:click="{() => $audioSrc= 'spotify'}">Spotify</button></li> 
-    <li><button on:click="{() => $audioSrc= 'apple'}">Apple</button></li> 
-</ul>
+  <p>Choose Audio Source</p>
+  <ChooseAudio />
 {/if}
 
 <p>A crackling fire illuminated the interior of a tavern. It was filled with tables stacked with empty tankards. Every table was occupied. A wooden bar ran along the length of the back wall, the surface scarred with divots, each telling a different story of the person who carved it. Despite its pock-marked surface, it had been sanded smooth by decades of sliding glasses. Atop a stool, a woman sat alone.</p>
@@ -49,3 +52,4 @@
 
 <h2>Chapter 1</h2>
 <p>Coming Soon...</p>
+  </section>
