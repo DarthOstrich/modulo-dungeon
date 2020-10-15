@@ -46,7 +46,7 @@
 </style>
 
 <nav>
-  <a aria-current="{segment === undefined ? 'page' : undefined}" href="."><Icon data={faChessRook} label="home"/></a>
+  <a aria-current="{segment === undefined ? 'page' : undefined}" href="/chapters"><Icon data={faChessRook} label="home"/></a>
 	<ul>
 		<li></li>
     <li><a  href="https://www.instagram.com/modulomusic/"><Icon data={faInstagram} label="Instagram"/></a></li>
