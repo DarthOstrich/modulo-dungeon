@@ -1,5 +1,5 @@
 <script>
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
   import ChooseAudio from '../components/ChooseAudio.svelte';
   import ChapterList from '../components/ChapterList.svelte'
   let freshLoad = false;
@@ -18,7 +18,6 @@
    text-align: center;
  }
  .start {
-    margin: auto;
     display: block;
     text-align: center;
     background: none;
@@ -42,6 +41,9 @@
       opacity: 100%;
     }
   }
+  section {
+    margin-top: 20vh;
+  }
 </style>
 
 <svelte:head>
@@ -58,7 +60,5 @@
 </section>
 
 {#if !freshLoad}
-  <section in:fade>
-  </section>
 {/if}
 

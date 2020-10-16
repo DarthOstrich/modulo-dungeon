@@ -14,6 +14,7 @@
 </script>
 
 <script>
+	import { fade } from 'svelte/transition';
 	import { audioSrc } from '../../store/stores.js';
   import ChooseAudio from '../../components/ChooseAudio.svelte'
   import SpotifyPlayer from '../../components/SpotifyPlayer.svelte'
@@ -30,6 +31,9 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
+  .support h2 {
+    text-align: center;
+  }
 	.content :global(h2) {
 		font-size: 1.4em;
 		font-weight: 500;
@@ -63,7 +67,7 @@
 	<title>{chapter.title}</title>
 </svelte:head>
 
-<section>
+<section in:fade>
   <h1>{chapter.chapterNum}</h1>
   <img src={chapter.img} alt={chapter.title}>
 
@@ -74,11 +78,19 @@
   {:else if $audioSrc === "deezer"}
     <iframe id="dzplayer" dztype="dzplayer" src="http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=176531862" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" width="700" height="240" allowTransparency="true"></iframe>
   {:else}
-    <h4>Choose Audio Source</h4>
+    <h2>Choose Audio Source</h2>
     <ChooseAudio />
   {/if}
 </section>
 
 <section class="content">
 	{@html chapter.html}
+</section>
+<section class="pagination">
+  <p style="text-align:right;">More Coming November 12th!</p>
+</section>
+<section class="support">
+  <h2>Support This Project</h2>
+  <p>There’s a number of ways you can support this project. You can <a href="https://modulo.fanlink.to/traveler">stream or buy the music</a> on any of the major platforms.</p>
+  <p>You can also leave a <a href="https://ko-fi.com/modulo">buy me a cup of coffee.</a></p>
 </section>
