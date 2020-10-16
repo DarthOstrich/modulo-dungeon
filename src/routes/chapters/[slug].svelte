@@ -92,5 +92,5 @@
 <section class="support">
   <h2>Support This Project</h2>
   <p>There’s a number of ways you can support this project. You can <a href="https://modulo.fanlink.to/traveler">stream or buy the music</a> on any of the major platforms.</p>
-  <p>You can also leave a <a href="https://ko-fi.com/modulo">buy me a cup of coffee.</a></p>
+  <p>You can also <a href="https://ko-fi.com/modulo">buy me a cup of coffee.</a></p>
 </section>
