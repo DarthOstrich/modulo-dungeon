@@ -47,7 +47,8 @@
 </style>
 
 <svelte:head>
-  <title>Modulo | Into The Dungeon</title>
+  <title>Into The Dungeon | Modulo</title>
+  <meta name="description" content="Into the Dungeon is a Neo 8-bit story arc written by Modulo. It includes Music, Art and a written story." />
 </svelte:head>
 
 <section>

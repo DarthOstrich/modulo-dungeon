@@ -65,7 +65,7 @@
   }
 </style>
 <svelte:head>
-	<title>{chapter.title}</title>
+  <title>{chapter.chapterNum} - {chapter.title} | Into the Dungeon</title>
 </svelte:head>
 
 <section in:fade>
