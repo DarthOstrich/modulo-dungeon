@@ -1,7 +1,7 @@
 <script>
   import Icon from 'svelte-awesome/components/Icon.svelte'
   import { faChessRook } from '@fortawesome/free-solid-svg-icons';
-  import { faInstagram, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
+  import { faInstagram, faTwitter, faYoutube, faSpotify } from '@fortawesome/free-brands-svg-icons';
 	export let segment;
 </script>
 
@@ -58,6 +58,7 @@
     <li><a  href="https://www.instagram.com/modulomusic/"><Icon data={faInstagram} label="Instagram"/></a></li>
 		<li><a  href="https://www.youtube.com/channel/UCqxQspCPTcE_wH0KBE5J-aw/"><Icon data={faYoutube} label="YouTube"/></a></li>
 		<li><a  href="https://twitter.com/code_nutt"><Icon data={faTwitter} label="Twitter"/></a></li>
+		<li><a  href="https://open.spotify.com/artist/1o6CGTMPjk1C0IdK9jV2H1"><Icon data={faSpotify} label="Spotify"/></a></li>
     <!-- <li><button><img src="cog-yellow.svg" alt="settings"></button></li> -->
 
 		<!-- for the blog link, we're using rel=prefetch so that Sapper prefetches
