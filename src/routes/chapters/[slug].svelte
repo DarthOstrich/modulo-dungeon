@@ -70,7 +70,7 @@
 
 <section in:fade>
   <h1>{chapter.chapterNum}</h1>
-  <img src={chapter.img} alt={chapter.title}>
+  <img src={chapter.img} alt={chapter.title} loading="lazy">
 
   {#if $audioSrc === "spotify"}
     <PlayerSpotify trackID={chapter.spotifyID}/>

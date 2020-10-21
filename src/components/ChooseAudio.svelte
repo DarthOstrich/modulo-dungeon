@@ -1,5 +1,5 @@
 <script>
-	import { count, audioSrc } from '../store/stores.js';
+  import { count, audioSrc } from '../store/stores.js';
   import Icon from 'svelte-awesome/components/Icon.svelte'
   import { faSpotify, faApple, faDeezer } from '@fortawesome/free-brands-svg-icons';
 
@@ -28,5 +28,5 @@
 <ul>
   <li on:click="{() => $audioSrc= 'spotify'}"><Icon data={faSpotify} label="Spotify" scale="3" /></li> 
   <li on:click="{() => $audioSrc= 'apple'}"><Icon data={faApple} label="Apple Music"  scale="3"/></li> 
-  <li on:click="{() => $audioSrc= 'deezer'}"><Icon data={faDeezer} label="Deezer Music"  scale="3"/></li> 
+    <!-- <li on:click="{() => $audioSrc= 'deezer'}"><Icon data={faDeezer} label="Deezer Music"  scale="3"/></li> -->
 </ul>
