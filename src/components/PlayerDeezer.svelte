@@ -1,6 +1,6 @@
 <script>
   export let trackID;
-  const src = 'http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=' + trackID
+  const src = 'https://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=' + trackID
 </script>
 <style>
   iframe {
