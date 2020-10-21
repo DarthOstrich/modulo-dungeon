@@ -12,8 +12,6 @@
 
 </script>
 <style>
- :global(main) {
-  }
  h1, h2 {
    text-align: center;
  }
