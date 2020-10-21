@@ -17,8 +17,9 @@
 	import { fade } from 'svelte/transition';
 	import { audioSrc } from '../../store/stores.js';
   import ChooseAudio from '../../components/ChooseAudio.svelte'
-  import SpotifyPlayer from '../../components/SpotifyPlayer.svelte'
-  import ApplePlayer from '../../components/ApplePlayer.svelte'
+  import PlayerSpotify from '../../components/PlayerSpotify.svelte'
+  import PlayerApple from '../../components/PlayerApple.svelte'
+  import PlayerDeezer from '../../components/PlayerDeezer.svelte'
 	export let chapter;
 </script>
 
@@ -72,11 +73,11 @@
   <img src={chapter.img} alt={chapter.title}>
 
   {#if $audioSrc === "spotify"}
-    <SpotifyPlayer trackID="2QmkVQgjxVnRWd9uM7kbbd"/>
+    <PlayerSpotify trackID={chapter.spotifyID}/>
   {:else if $audioSrc === "apple"}
-    <ApplePlayer trackID="1533876783"/>
+    <PlayerApple trackID={chapter.appleID}/>
   {:else if $audioSrc === "deezer"}
-    <iframe id="dzplayer" dztype="dzplayer" src="http://developers.deezer.com/us/plugins/player?playlist=true&width=700&height=240&autoplay=false&type=album&id=176531862" scrolling="no" frameborder="0" style="border:none; overflow:hidden;" width="700" height="240" allowTransparency="true"></iframe>
+    <PlayerDeezer trackID={chapter.deezerID} />
   {:else}
     <h2>Choose Audio Source</h2>
     <ChooseAudio />

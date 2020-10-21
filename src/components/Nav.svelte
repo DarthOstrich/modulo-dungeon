@@ -11,6 +11,12 @@
     display: flex;
     justify-content: space-between;
   }
+  :global(.fa-icon) {
+    color: white;
+  }
+  :global(.fa-icon:hover) {
+    color: #ffd34f;
+  }
   ul {
     margin: 0px;
     padding: 0px;

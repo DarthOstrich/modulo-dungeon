@@ -28,5 +28,5 @@
 <ul>
   <li on:click="{() => $audioSrc= 'spotify'}"><Icon data={faSpotify} label="Spotify" scale="3" /></li> 
   <li on:click="{() => $audioSrc= 'apple'}"><Icon data={faApple} label="Apple Music"  scale="3"/></li> 
-    <!-- <li><a href="chapters" on:click="{() => $audioSrc= 'deezer'}"><Icon data={faDeezer} label="Deezer" scale="3"/></a></li> -->
+  <li on:click="{() => $audioSrc= 'deezer'}"><Icon data={faDeezer} label="Deezer Music"  scale="3"/></li> 
 </ul>
