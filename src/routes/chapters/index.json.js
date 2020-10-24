@@ -3,10 +3,7 @@ import chapters from "./_chapters.js";
 const contents = JSON.stringify(
   chapters.map(chapter => {
     return {
-      chapterNum: chapter.chapterNum,
-      title: chapter.title,
-      slug: chapter.slug,
-      img: chapter.img
+      ...chapter
     };
   })
 );

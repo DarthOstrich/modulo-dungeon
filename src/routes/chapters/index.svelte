@@ -8,67 +8,65 @@
 
 <script>
 	import { fade } from 'svelte/transition';
-	/* import { audioSrc } from '../../store/stores.js'; */
-  /* import ChapterList from '../../components/ChapterList.svelte' */
-  /* import ChooseAudio from '../../components/ChooseAudio.svelte' */
-  /* import SpotifyPlayer from '../../components/SpotifyPlayer.svelte' */
-  /* import ApplePlayer from '../../components/ApplePlayer.svelte' */
-  /* let audio_src; */
-
-	/* const unsubscribe = audioSrc.subscribe(value => { */
-	/* 	audio_src = value; */
-	/* }); */
+  import Support from '../../components/Support.svelte';
+  import Icon from 'svelte-awesome/components/Icon.svelte'
+  import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
 	export let chapters;
 </script>
 <style>
-  img {
-    max-width: 100%;
-  }
   h1, h2 { text-align: center; }
-  h3 { font-size: 24px; }
+  h2 {
+    text-transform: uppercase;
+  }
+
   a {
     text-decoration: none;
   }
-  .chapter_list a {
-    display: flex;
-    align-items: flex-end;
+  li {
+    font-family: "VT323";
+    font-size: 2.4rem;
+    color: #636363; 
+    list-style-type: none;
+    position: relative;
   }
-  .chapter_img {
-    flex-basis: 33%;
+  li svg {
+    display: none;
   }
-  .chapter_title {
-    flex-basis: 66%;
-    padding-left: 1rem;
+  :global(.fa-icon.marker) {
+    position: absolute;
+    top: 2px;
+    left: -15px;
+    display: none;
+    color: #FFD34F;
   }
-  .chapter_title h1, .chapter_title h2 {
-    text-align: left;
-    margin: 0;
+  :global(ul > li:first-child  .fa-icon.marker) {
+    display: block;
+  }
+  :global(li:hover > .fa-icon.marker) {
+    display: block;
   }
 </style>
 
 <svelte:head>
 	<title>Chapters | Into The Dungeon</title>
+  <meta name="description" content="Into the Dungeon is a Neo 8-bit story arc written by Modulo. It includes Music, Art and a written story." />
 </svelte:head>
 
 <section in:fade>
   <h1>Into The Dungeon</h1>
-  <p>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure.</p>
-  <h2>Chapters</h2>
+  <p>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
+  <h2>- Chapter Select - </h2>
 
-  {#each chapters as chapter}
-    <article class="chapter_list">
-      <a rel="prefetch" href="chapters/{chapter.slug}">
-        <figure class="chapter_img">
-          <img src={chapter.img} alt={chapter.title}>
-        </figure>
-        <header class="chapter_title">
-          <h2>{chapter.chapterNum}</h2>
-          <h1>{chapter.title}</h1>
-        </header>
-      </a>
-    </article>
+  <ul>
+  {#each chapters as {published, slug, num, title}}
+    {#if published}
+      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{slug}">{num} - {title}</a></li>
+    {:else}
+      <li>{num} (Coming Soon)</li>
+    {/if}
   {/each}
-  <p>More Coming November 12th!</p>
+  </ul>
 </section>
+<Support />
 
