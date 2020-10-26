@@ -22,6 +22,8 @@
     display: flex;
     flex-direction: column;
     /* align-items: center; */
+    max-width: 600px;
+
   }
   h2 {
     margin: -3rem 0 1rem 0;

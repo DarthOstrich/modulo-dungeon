@@ -44,22 +44,28 @@
   .pagination p {
     color: #636363;
   }
+  .content {
+    max-width: 700px;
+  }
 </style>
 <svelte:head>
   <title>{chapter.num} - {chapter.title} | Into the Dungeon</title>
 </svelte:head>
 
-<section in:fade>
-  <h1>{chapter.num}</h1>
-  <img src={chapter.img} alt={chapter.title} loading="lazy">
+<article in:fade>
+  <h2>{chapter.num}</h2>
+  <h1>{chapter.title}</h1>
+  <figure>
+    <img src={chapter.img} alt={chapter.title} loading="lazy">
+  </figure>
   <ChooseAudio chapter={chapter}/>
-</section>
+  <section class="content">
+    {@html chapter.html}
+    <section class="pagination">
+      <a href="/chapters">Return to Chapter Select</a>
+      <p style="text-align:right;">More Coming November 12th!</p>
+    </section>
+  </section>
+  <Support />
+</article>
 
-<section class="content">
-	{@html chapter.html}
-</section>
-<section class="pagination">
-  <a href="/chapters">Return to Chapter Select</a>
-  <p style="text-align:right;">More Coming November 12th!</p>
-</section>
-<Support />
