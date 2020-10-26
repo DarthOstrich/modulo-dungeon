@@ -1,10 +1,3 @@
-<script context="module">
-	export function preload() {
-		return this.fetch(`chapters.json`).then(r => r.json()).then(chapters => {
-			return { chapters };
-		});
-	}
-</script>
 <script>
 	import { fade, fly } from 'svelte/transition';
   import { flip } from 'svelte/animate';
@@ -98,25 +91,15 @@
 </svelte:head>
 
 <section class:selected="{!$firstLoad}">
-  <!-- <a href="chapters/" class="start">Press Start</a> -->
 
   <h1>Into The Dungeon</h1>
+  <a href="chapters/" class="start">Press Start</a> 
 {#if $firstLoad}
-  <button on:click="{() => $firstLoad = false}" class="start">Press Start</button>
+  <!--  <button on:click="{() => $firstLoad = false}" class="start">Press Start</button> -->
 {/if}
 </section>
 
 {#if !$firstLoad}
   <p in:fade>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
-  <h2>- Chapter Select - </h2>
-  <ul in:fade>
-  {#each chapters as {published, slug, num, title}}
-    {#if published}
-      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{slug}">{num} - {title}</a></li>
-    {:else}
-      <li>{num} (Coming Soon)</li>
-    {/if}
-  {/each}
-  </ul>
 {/if}
 
