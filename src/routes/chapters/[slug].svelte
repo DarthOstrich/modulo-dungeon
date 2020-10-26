@@ -52,8 +52,7 @@
 <section in:fade>
   <h1>{chapter.num}</h1>
   <img src={chapter.img} alt={chapter.title} loading="lazy">
-
-    <ChooseAudio chapter={chapter}/>
+  <ChooseAudio chapter={chapter}/>
 </section>
 
 <section class="content">
