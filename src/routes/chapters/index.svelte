@@ -74,11 +74,11 @@
   <h2>- Chapter Select - </h2>
 
   <ul>
-  {#each chapters as {published, slug, num, title}}
+  {#each chapters as {published, slug, chapter, title}}
     {#if published}
-      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{slug}">{num} - {title}</a></li>
+      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{slug}">{chapter} - {title}</a></li>
     {:else}
-      <li>{num} (Coming Soon)</li>
+      <li>{chapter} (Coming Soon)</li>
     {/if}
   {/each}
   </ul>

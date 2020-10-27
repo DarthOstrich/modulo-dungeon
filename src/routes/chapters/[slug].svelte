@@ -11,13 +11,17 @@
 			this.error(res.status, data.message);
 		}
 	}
+
+
 </script>
 
 <script>
+  import chapters from "./_chapters.js";
 	import { fade } from 'svelte/transition';
   import ChooseAudio from '../../components/ChooseAudio.svelte'
   import Support from '../../components/Support.svelte'
 	export let chapter;
+  const chaptersFiltered = chapters.filter((chapter)=>chapter.published)
 </script>
 
 <style>
@@ -108,12 +112,12 @@
 
 </style>
 <svelte:head>
-  <title>{chapter.num} - {chapter.title} | Into the Dungeon</title>
+  <title>{chapter.chapter} - {chapter.title} | Into the Dungeon</title>
 </svelte:head>
 
 <section in:fade>
   <header>
-    <h2>{chapter.num}</h2>
+    <h2>{chapter.chapter}</h2>
     <h1>{chapter.title}</h1>
   </header>
   <aside>
@@ -126,7 +130,12 @@
     {@html chapter.html}
     <section class="pagination">
       <a href="/chapters">Return to Chapter Select</a>
-      <p style="text-align:right;">More Coming November 12th!</p>
+      {#if chapter.num < chaptersFiltered.length}
+        <p style="text-align:right;">More Coming November 9th!</p>
+      {:else}
+        <a href={chapters[chapter.num + 1]}>link to next story</a>
+      {/if} 
+
     </section>
   </article>
   <Support class="support"/>

@@ -9,7 +9,8 @@
 
 const posts = [
   {
-    num: "Prologue",
+    num: 0,
+    chapter: "Prologue",
     title: "The Traveler",
     slug: "prologue-the-traveler",
     img: "Prologue-650.png",
@@ -29,7 +30,8 @@ const posts = [
 		`
   },
   {
-    num: "Chapter 1",
+    num: 1,
+    chapter: "Chapter 1",
     title: "Drawbridge",
     slug: "chapter-one-drawbridge",
     img: "Prologue-650.png",
@@ -42,7 +44,8 @@ const posts = [
 		`
   },
   {
-    num: "Chapter 2",
+    num: 2,
+    chapter: "Chapter 2",
     title: "To Battle!",
     slug: "chapter-two-to-battle",
     img: "Prologue-650.png",
