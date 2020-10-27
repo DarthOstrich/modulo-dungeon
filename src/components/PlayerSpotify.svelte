@@ -4,7 +4,7 @@
 </script>
 <style>
   iframe {
-    width: 300px;
+    width: 70%;
     height: 75px;
     
   }

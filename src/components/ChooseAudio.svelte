@@ -15,6 +15,7 @@
 
 <style>
   section {
+    margin: 2rem auto;
     border: 5px solid #e5e5e5;
     border-radius: 15px;
     padding: 1rem;

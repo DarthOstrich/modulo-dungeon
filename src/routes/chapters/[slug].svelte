@@ -45,27 +45,84 @@
     color: #636363;
   }
   .content {
-    max-width: 700px;
+    /* max-width: 700px; */
   }
+  section {
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  header {
+    flex-basis: 100%;
+    order: 1; 
+    grid-area: Header;
+  }
+  figure {
+    grid-area: Image;
+  }
+  .content {
+    grid-area: Content;
+  }
+  aside {
+    grid-area: Aside;
+    order: 2;
+  }
+  .content {
+    order: 3;
+  }
+  
+  @media (min-width: 768px) {
+    section {
+      /* display: flex; */
+      /* flex-wrap: wrap; */
+      /* justify-content: space-between; */
+      /* flex-direction: row; */
+       display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      gap: 10px 10px;
+      grid-template-areas:
+        "Header Header Aside"
+        "Content Content Aside"
+        "Content Content Aside"
+        ;
+    }
+    .content {
+      /* order: 2; */
+      /* flex-basis: calc(70% - 2rem); */
+      /* margin-right: 2rem; */
+    }
+    aside{
+      /* flex-basis: 30%; */
+      /* order: 3; */
+    }
+    :global(.support) {
+      grid-column: 2;
+    }
+  }
+
 </style>
 <svelte:head>
   <title>{chapter.num} - {chapter.title} | Into the Dungeon</title>
 </svelte:head>
 
-<article in:fade>
-  <h2>{chapter.num}</h2>
-  <h1>{chapter.title}</h1>
-  <figure>
-    <img src={chapter.img} alt={chapter.title} loading="lazy">
-  </figure>
-  <ChooseAudio chapter={chapter}/>
-  <section class="content">
+<section in:fade>
+  <header>
+    <h2>{chapter.num}</h2>
+    <h1>{chapter.title}</h1>
+  </header>
+  <aside>
+    <figure>
+      <img src={chapter.img} alt={chapter.title} loading="lazy">
+    </figure>
+    <ChooseAudio chapter={chapter}/>
+  </aside>
+  <article class="content">
     {@html chapter.html}
     <section class="pagination">
       <a href="/chapters">Return to Chapter Select</a>
       <p style="text-align:right;">More Coming November 12th!</p>
     </section>
-  </section>
-  <Support />
-</article>
+  </article>
+  <Support class="support"/>
+</section>
 

@@ -8,6 +8,7 @@
     flex-direction: column;
     /* align-items: center; */
     max-width: 600px;
+    margin: auto;
   }
   h2 {
     margin: -3rem 0 1rem 0;
@@ -21,7 +22,7 @@
     margin-top: 0px;
   }
 </style>
-<section>
+<section class={$$props.class}>
   <h2>Support this Project</h2>
   <p>As you may know, streaming music pays pennies. If you enjoy this project, any additional pennies will ensure the lights stay on after the music is done spinning.</p>
   <p>There’s a number of ways you can support this project. You can <a href="https://modulo.fanlink.to/traveler">stream or buy it on any of the major platforms</a>.</p>

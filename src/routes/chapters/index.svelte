@@ -23,6 +23,15 @@
   a {
     text-decoration: none;
   }
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  ul {
+    padding: 0px 20px;
+    margin-bottom: 40px;
+  }
   li {
     font-family: "VT323";
     font-size: 2.4rem;
@@ -46,6 +55,7 @@
   :global(li:hover > .fa-icon.marker) {
     display: block;
   }
+  article { max-width: 700px }
 </style>
 
 <svelte:head>
@@ -54,8 +64,10 @@
 </svelte:head>
 
 <section in:fade>
-  <h1>Into The Dungeon</h1>
-  <p>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
+  <article>
+    <h1>Into The Dungeon</h1>
+    <p>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
+  </article>
   <h2>- Chapter Select - </h2>
 
   <ul>
@@ -67,5 +79,5 @@
     {/if}
   {/each}
   </ul>
+  <Support />
 </section>
-<Support />
