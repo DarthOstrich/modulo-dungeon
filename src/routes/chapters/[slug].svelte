@@ -56,6 +56,12 @@
     order: 1; 
     grid-area: Header;
   }
+  h1, h2 {
+    margin: 0;
+  }
+  :global(p) {
+    margin-top: 0px;
+  }
   figure {
     grid-area: Image;
   }
