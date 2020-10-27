@@ -39,6 +39,9 @@
     list-style-type: none;
     position: relative;
   }
+  li a {
+    animation: fade-in-out 1.2s ease infinite;
+  }
   li svg {
     display: none;
   }

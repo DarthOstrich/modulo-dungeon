@@ -39,17 +39,6 @@
     text-decoration: none;
     animation: fade-in-out 1.2s ease infinite;
  }
-  @keyframes fade-in-out {
-    0% {
-      opacity: 100%;
-    }
-    50% {
-      opacity: 0%;
-    }
-    100% {
-      opacity: 100%;
-    }
-  }
 
   h1, h2 { text-align: center; }
   h2 {

@@ -64,3 +64,14 @@ section {
 
 @media (min-width: 400px) {
 }
+@keyframes fade-in-out {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
