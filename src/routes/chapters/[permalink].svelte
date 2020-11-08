@@ -1,18 +1,15 @@
 <script context="module">
-	export async function preload({ params }) {
-		// the `slug` parameter is available because
-		// this file is called [slug].svelte
-		const res = await this.fetch(`chapters/${params.slug}.json`);
-		const data = await res.json();
+  // import the logic for finding a post based on permalink
+  import {findChapter} from '../../chapters'
 
-		if (res.status === 200) {
-			return { chapter: data };
-		} else {
-			this.error(res.status, data.message);
-		}
-	}
+  // sapper calls this to load our data
+  export function preload(page) {
+    // find the post based on the permalink param
+    const chapter = findChapter(page.params.permalink)
 
-
+    // return a list of props
+    return { chapter }
+  }
 </script>
 
 <script>

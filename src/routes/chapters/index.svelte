@@ -1,9 +1,11 @@
 <script context="module">
-	export function preload() {
-		return this.fetch(`chapters.json`).then(r => r.json()).then(chapters => {
-			return { chapters };
-		});
-	}
+
+  import { chapters } from '../../chapters.js'
+	/* export function preload() { */
+	/* 	return this.fetch(`chapters.json`).then(r => r.json()).then(chapters => { */
+	/* 		return { chapters }; */
+	/* 	}); */
+	/* } */
 </script>
 
 <script>
@@ -12,7 +14,13 @@
   import Icon from 'svelte-awesome/components/Icon.svelte'
   import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
-	export let chapters;
+	/* export let chapters; */
+  function formatDate(date) {
+    let newDate = new Date(date);
+    newDate.setDate(newDate.getDate() + 1)
+    let formattedDate = newDate.toLocaleDateString('en-US',{year: 'numeric', month: 'long', day: 'numeric'})
+    return formattedDate  
+  }
 </script>
 <style>
   h1, h2 { text-align: center; }
@@ -74,11 +82,11 @@
   <h2>- Chapter Select - </h2>
 
   <ul>
-  {#each chapters as {published, slug, chapter, title}}
+  {#each chapters as {published, slug, chapter, title, date, permalink}}
     {#if published}
-      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{slug}">{chapter} - {title}</a></li>
+      <li><Icon data={faCaretRight} scale="2" class="marker" /><a rel="prefetch" href="chapters/{permalink}">{chapter} - {title}</a></li>
     {:else}
-      <li>{chapter} (Coming Soon)</li>
+      <li>{chapter} (Coming {formatDate(date)})</li>
     {/if}
   {/each}
   </ul>

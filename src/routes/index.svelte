@@ -12,7 +12,7 @@
   import Icon from 'svelte-awesome/components/Icon.svelte'
   import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
 
-	export let chapters;
+	/* export let chapters; */
 
 </script>
 <style>
