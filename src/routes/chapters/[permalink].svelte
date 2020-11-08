@@ -1,6 +1,6 @@
 <script context="module">
   // import the logic for finding a post based on permalink
-  import {findChapter} from '../../chapters'
+  import {findChapter, findNextChapter} from '../../chapters'
 
   // sapper calls this to load our data
   export function preload(page) {
@@ -13,12 +13,12 @@
 </script>
 
 <script>
-  import chapters from "./_chapters.js";
+  import { chapters } from '../../chapters.js'
 	import { fade } from 'svelte/transition';
   import ChooseAudio from '../../components/ChooseAudio.svelte'
   import Support from '../../components/Support.svelte'
 	export let chapter;
-  const chaptersFiltered = chapters.filter((chapter)=>chapter.published)
+  const nextChapter = findNextChapter(chapter.num + 1)
 </script>
 
 <style>
@@ -127,10 +127,12 @@
     {@html chapter.html}
     <section class="pagination">
       <a href="/chapters">Return to Chapter Select</a>
-      {#if chapter.num < chaptersFiltered.length}
-        <p style="text-align:right;">More Coming November 9th!</p>
+      {#if !nextChapter}
+      {:else if !nextChapter.published}
+        <!-- <p style="text-align:right;">More Coming {nextChapter.date}!</p> -->
+        <p style="text-align:right;">More Coming Soon!</p> 
       {:else}
-        <a href={chapters[chapter.num + 1]}>link to next story</a>
+        <a href="chapters/{nextChapter.permalink}">Next Chapter - {nextChapter.title}</a>
       {/if} 
 
     </section>

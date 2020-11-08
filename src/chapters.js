@@ -23,3 +23,9 @@ export function findChapter(permalink) {
   // use lodash to find by field name:
   return _.find(chapters, { permalink });
 }
+
+// provide a way to find a post by permalink
+export function findNextChapter(num) {
+  // use lodash to find by field name:
+  return _.find(chapters, { num });
+}

@@ -47,7 +47,7 @@
     list-style-type: none;
     position: relative;
   }
-  li a {
+  li a:hover {
     animation: fade-in-out 1.2s ease infinite;
   }
   li svg {
@@ -60,9 +60,9 @@
     display: none;
     color: #FFD34F;
   }
-  :global(ul > li:first-child  .fa-icon.marker) {
-    display: block;
-  }
+  /* :global(ul > li:first-child  .fa-icon.marker) { */
+  /*   display: block; */
+  /* } */
   :global(li:hover > .fa-icon.marker) {
     display: block;
   }
