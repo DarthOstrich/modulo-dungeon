@@ -24,7 +24,7 @@
     transition: all 500ms ease-in-out;
   }
   .selected {
-    margin-top: 0;
+    /* margin-top: 0; */
     transition: all 500ms ease-in-out;
 	}
   .start {

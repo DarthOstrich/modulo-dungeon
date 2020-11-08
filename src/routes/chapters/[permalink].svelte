@@ -60,9 +60,9 @@
   h1, h2 {
     margin: 0;
   }
-  :global(p) {
-    margin-top: 0px;
-  }
+  /* :global(p) { */
+  /*   margin-top: 0px; */
+  /* } */
   figure {
     grid-area: Image;
   }
@@ -134,7 +134,6 @@
       {:else}
         <a href="chapters/{nextChapter.permalink}">Next Chapter - {nextChapter.title}</a>
       {/if} 
-
     </section>
   </article>
   <Support class="support"/>
