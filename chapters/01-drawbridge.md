@@ -4,8 +4,8 @@ chapter: Chapter 1
 title: Drawbridge
 slug: chapter-one-drawbridge
 img: 02_Drawbridge-650.png
-appleID:
-spotifyID:
+appleID: 1537499113
+spotifyID: 1kau026CXM1UuUZZr6wwOt
 deezerID:
 published: true
 date: 2020-11-09
