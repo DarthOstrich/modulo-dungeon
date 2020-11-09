@@ -3,11 +3,11 @@ num: 1
 chapter: Chapter 1
 title: Drawbridge
 slug: chapter-one-drawbridge
-img: Prologue-650.png
+img: 02_Drawbridge-650.png
 appleID:
 spotifyID:
 deezerID:
-published: false
+published: true
 date: 2020-11-09
 ---
 
