@@ -110,6 +110,16 @@
 </style>
 <svelte:head>
   <title>{chapter.chapter} - {chapter.title} | Into the Dungeon</title>
+  <meta name="description" content="" />
+  <meta property="og:title" content="{chapter.chapter} - {chapter.title} | Into the Dungeon" />
+  <meta property="og:image" content="{chapter.img}" />
+  <meta property="og:url" content="https://dungeon.modulo.fm/chapters/{chapter.permalink}" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@code_nutt" />
+  <meta name="twitter:creator" content="@code_nutt" />
+  <meta name="twitter:title" content="{chapter.chapter} - {chapter.title} | Into the Dungeon" />
+  <meta name="twitter:image" content="{chapter.img}" />
+
 </svelte:head>
 
 <section in:fade>
