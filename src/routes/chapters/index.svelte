@@ -76,8 +76,9 @@
   <meta property="og:description" content="Into the Dungeon is a Neo 8-bit story arc written by Modulo. It includes Music, Art and a written story." />
   <meta property="og:image" content="dungeon-socials.jpg" />
   <meta property="og:url" content="https://dungeon.modulo.fm" />
-  <meta name="twitter:card" content="Into The Dungeon by Modulo" />
-  <meta name="twitter:site" content="https://dungeon.modulo.fm" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@code_nutt" />
+  <meta name="twitter:creator" content="@code_nutt" />
   <meta name="twitter:title" content="Into The Dungeon by Modulo" />
   <meta name="twitter:description" content="Into the Dungeon is a Neo 8-bit story arc written by Modulo. It includes Music, Art and a written story." />
   <meta name="twitter:image" content="dungeon-socials.jpg" />
