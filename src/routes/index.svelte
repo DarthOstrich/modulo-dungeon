@@ -1,24 +1,24 @@
 <script>
-	import { fade, fly } from 'svelte/transition';
-  import { flip } from 'svelte/animate';
-  import ChooseAudio from '../components/ChooseAudio.svelte';
-  import ChapterList from '../components/ChapterList.svelte'
-	import { audioSrc, firstLoad } from '../store/stores.js';
-
+  import { fade, fly } from "svelte/transition";
+  import { flip } from "svelte/animate";
+  import ChooseAudio from "../components/ChooseAudio.svelte";
+  import ChapterList from "../components/ChapterList.svelte";
+  import { audioSrc, firstLoad } from "../store/stores.js";
 
   function changeAudioSrc(value) {
-    audioSrc.update(src => src = value)
-  } 
-  import Icon from 'svelte-awesome/components/Icon.svelte'
-  import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+    audioSrc.update((src) => (src = value));
+  }
+  import Icon from "svelte-awesome/components/Icon.svelte";
+  import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
-	/* export let chapters; */
-
+  /* export let chapters; */
 </script>
+
 <style>
- h1, h2 {
-   text-align: center;
- }
+  h1,
+  h2 {
+    text-align: center;
+  }
   section {
     margin-top: 20vh;
     transition: all 500ms ease-in-out;
@@ -26,21 +26,24 @@
   .selected {
     /* margin-top: 0; */
     transition: all 500ms ease-in-out;
-	}
+  }
   .start {
     display: block;
     margin: auto;
     text-align: center;
     background: none;
-    color: #FFD34F;
-    font-family: 'VT323';
+    color: #ffd34f;
+    font-family: "VT323";
     font-size: 48px;
     border: none;
     text-decoration: none;
     animation: fade-in-out 1.2s ease infinite;
- }
+  }
 
-  h1, h2 { text-align: center; }
+  h1,
+  h2 {
+    text-align: center;
+  }
   h2 {
     text-transform: uppercase;
   }
@@ -51,7 +54,7 @@
   li {
     font-family: "VT323";
     font-size: 2.4rem;
-    color: #636363; 
+    color: #636363;
     list-style-type: none;
     position: relative;
   }
@@ -63,9 +66,9 @@
     top: 2px;
     left: -15px;
     display: none;
-    color: #FFD34F;
+    color: #ffd34f;
   }
-  :global(ul > li:first-child  .fa-icon.marker) {
+  :global(ul > li:first-child .fa-icon.marker) {
     display: block;
   }
   :global(li:hover > .fa-icon.marker) {
@@ -88,16 +91,14 @@
   <meta name="twitter:image" content="dungeon-socials.jpg" />
 </svelte:head>
 
-<section class:selected="{!$firstLoad}">
-
+<section class:selected={!$firstLoad}>
   <h1>Into The Dungeon</h1>
-  <a href="chapters/" class="start">Press Start</a> 
-{#if $firstLoad}
-  <!--  <button on:click="{() => $firstLoad = false}" class="start">Press Start</button> -->
-{/if}
+  <a href="chapters/" class="start">Press Start</a>
+  {#if $firstLoad}
+    <!--  <button on:click="{() => $firstLoad = false}" class="start">Press Start</button> -->
+  {/if}
 </section>
 
 {#if !$firstLoad}
   <p in:fade>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
 {/if}
-
