@@ -19,7 +19,9 @@
   import Support from "../../components/Support.svelte";
   export let chapter;
   let isMobile;
-  const nextChapter = findNextChapter(chapter.num + 1);
+  let nextChapter;
+  $: nextChapter = findNextChapter(chapter.num + 1);
+
   const handleResize = () => {
     if (typeof window !== "undefined") {
       if (window.matchMedia("(max-width: 768px)").matches) {
