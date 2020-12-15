@@ -152,9 +152,8 @@
     <section class="pagination">
       <a href="/chapters">Return to Chapter Select</a>
       {#if !nextChapter}
-
+        <p style="text-align:right;">More Coming Soon!</p>
       {:else if !nextChapter.published}
-        <!-- <p style="text-align:right;">More Coming {nextChapter.date}!</p> -->
         <p style="text-align:right;">More Coming Soon!</p>
       {:else}<a href="chapters/{nextChapter.permalink}">Next Chapter - {nextChapter.title}</a>{/if}
     </section>
