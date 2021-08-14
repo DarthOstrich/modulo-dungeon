@@ -1,4 +1,5 @@
 ---
+layout: chapter
 num: 1
 chapter: Chapter 1
 title: Drawbridge
@@ -9,6 +10,8 @@ spotifyID: 4J0YEuWCwp6OO5hWrbMcPx
 deezerID:
 published: true
 date: 2020-11-09
+next: chapter-two-to-battle
+prev: prologue-the-traveler
 ---
 
 A short ride up a twisted path on Nightmare, her soot-colored steed, and Marceline arrived at the castle gates. She pulled Nightmare's reins, stopping her faithful companion before they reached the entrance.

@@ -1,5 +1,6 @@
 <script>
-  export let chapter;
+  export let spotifyID;
+  export let appleID;
   import { audioSrc } from '../store/stores.js';
   import Icon from 'svelte-awesome/components/Icon.svelte'
   import { faSpotify, faApple, faDeezer } from '@fortawesome/free-brands-svg-icons';
@@ -66,16 +67,16 @@
   <h2>Choose Audio Source</h2>
   {#if $audioSrc === "spotify"}
     <aside>
-      <PlayerSpotify trackID={chapter.spotifyID}/>
+      <PlayerSpotify trackID={spotifyID}/>
       <button on:click="{()=> $audioSrc = 'none'}">Change Audio</button>
     </aside>
   {:else if $audioSrc === "apple"}
     <aside>
-      <PlayerApple trackID={chapter.appleID}/>
+      <PlayerApple trackID={appleID}/>
       <button on:click="{()=> $audioSrc = 'none'}">Change Audio</button>
     </aside>
   {:else if $audioSrc === "deezer"}
-    <PlayerDeezer trackID={chapter.deezerID} />
+    <PlayerDeezer trackID={deezerID} />
   {:else}
     <ul>
       <li on:click="{() => $audioSrc = 'spotify'}"><Icon data={faSpotify} label="Spotify" scale="3" /></li> 

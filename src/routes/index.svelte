@@ -1,19 +1,3 @@
-<script>
-  import { fade, fly } from "svelte/transition";
-  import { flip } from "svelte/animate";
-  import ChooseAudio from "../components/ChooseAudio.svelte";
-  import ChapterList from "../components/ChapterList.svelte";
-  import { audioSrc, firstLoad } from "../store/stores.js";
-
-  function changeAudioSrc(value) {
-    audioSrc.update((src) => (src = value));
-  }
-  import Icon from "svelte-awesome/components/Icon.svelte";
-  import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
-
-  /* export let chapters; */
-</script>
-
 <style>
   h1,
   h2 {
@@ -39,7 +23,6 @@
     text-decoration: none;
     animation: fade-in-out 1.2s ease infinite;
   }
-
   h1,
   h2 {
     text-align: center;
@@ -47,7 +30,6 @@
   h2 {
     text-transform: uppercase;
   }
-
   a {
     text-decoration: none;
   }
@@ -91,14 +73,7 @@
   <meta name="twitter:image" content="dungeon-socials.jpg" />
 </svelte:head>
 
-<section class:selected={!$firstLoad}>
+<section>
   <h1>Into The Dungeon</h1>
   <a href="chapters/" class="start">Press Start</a>
-  {#if $firstLoad}
-    <!--  <button on:click="{() => $firstLoad = false}" class="start">Press Start</button> -->
-  {/if}
 </section>
-
-{#if !$firstLoad}
-  <p in:fade>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
-{/if}
