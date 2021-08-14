@@ -1,5 +1,25 @@
 <script context="module">
-	import { getChapters } from '$lib/utils/chapter';
+	/**
+	 * @type {import('@sveltejs/kit').Load}
+	 */
+	export async function load({fetch}) {
+    const url = `/chapters/chapters.json`;
+    const res = await fetch(url);
+
+    if (res.ok) {
+      const data = await res.json();
+      return {
+        props: {
+          chapters: data.chapters
+        }
+      };
+    }
+
+    return {
+      status: res.status,
+      error: new Error(`Could not load ${url}`)
+    };
+	}
 </script>
 
 <script>
