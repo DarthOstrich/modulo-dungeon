@@ -1,6 +1,7 @@
 <script>
-	import Support from '../components/Support.svelte';
   import { fade } from "svelte/transition";
+	import Support from '../components/Support.svelte';
+  import ChooseAudio from "../components/ChooseAudio.svelte";
 	export let chapter;
 	export let title;
 	export let date;
@@ -47,6 +48,7 @@
 	</header>
 	<aside>
 		<figure><img src={img} alt={title} loading="lazy" /></figure>
+    <ChooseAudio {spotifyID} {appleID} />
     {#if !isMobile}
       <Support class="support" />
     {/if}

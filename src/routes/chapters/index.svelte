@@ -1,12 +1,5 @@
 <script context="module">
-	/* import { chapters } from "../../chapters.js"; */
-  const chapters = [{
-    published: true,
-    chapter: 1,
-    title: "Chapter 1",
-    date: "1 jul",
-    permalink: 'chapter-01'
-  }]
+  import { getChapters } from '$lib/utils/chapter'
 </script>
 
 <script>
@@ -14,6 +7,8 @@
 	import Support from '../../components/Support.svelte';
 	import Icon from 'svelte-awesome/components/Icon.svelte';
 	import { faCaretRight } from '@fortawesome/free-solid-svg-icons';
+
+	export let chapters;
 
 	function formatDate(date) {
 		let newDate = new Date(date);
@@ -61,18 +56,22 @@
 	</article>
 	<h2>- Chapter Select -</h2>
 
-	<ul>
-		{#each chapters as { published, slug, chapter, title, date, permalink }}
-			{#if published}
-				<li>
-					<a rel="prefetch" href="chapters/{permalink}">{chapter} - {title}</a>
-					<Icon data={faCaretRight} scale="2" class="marker" />
-				</li>
-			{:else}
-				<li>{chapter} (Coming {formatDate(date)})</li>
-			{/if}
-		{/each}
-	</ul>
+	{#if chapters}
+		<ul>
+			{#each chapters as { published, slug, chapter, title, date, permalink }}
+				{#if published}
+					<li>
+						<a rel="prefetch" href="chapters/{permalink}">{chapter} - {title}</a>
+						<Icon data={faCaretRight} scale="2" class="marker" />
+					</li>
+				{:else}
+					<li>{chapter} (Coming {formatDate(date)})</li>
+				{/if}
+			{/each}
+		</ul>
+	{:else}
+    <p>Loading...</p>
+	{/if}
 	<Support />
 </section>
 
