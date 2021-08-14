@@ -47,7 +47,7 @@
 		<h1>{title}</h1>
 	</header>
 	<aside>
-		<figure><img src={img} alt={title} loading="lazy" /></figure>
+    <figure><img src={'/' + img} alt={title} loading="lazy" /></figure>
     <ChooseAudio {spotifyID} {appleID} />
     {#if !isMobile}
       <Support class="support" />

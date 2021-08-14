@@ -1,5 +1,5 @@
 <script context="module">
-  import { getChapters } from '$lib/utils/chapter'
+	import { getChapters } from '$lib/utils/chapter';
 </script>
 
 <script>
@@ -70,7 +70,10 @@
 			{/each}
 		</ul>
 	{:else}
-    <p>Loading...</p>
+		<ul>
+			<a rel="prefetch" href="chapters/00-prologue">Prologue - The Traveler</a>
+			<Icon data={faCaretRight} scale="2" class="marker" />
+		</ul>
 	{/if}
 	<Support />
 </section>
