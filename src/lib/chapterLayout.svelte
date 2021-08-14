@@ -11,6 +11,8 @@
 	export let deezerID;
 	export let published;
 	export let permalink;
+  export let prev;
+  export let next;
 
   let isMobile;
   let nextChapter;
@@ -56,12 +58,16 @@
 	<article class="content">
 		<slot />
 		<section class="pagination">
-			<a href="/chapters">Return to Chapter Select</a>
-			{#if !nextChapter}
+			{#if !prev}
+			  <a href="/chapters">Return to Chapter Select</a>
+      {:else}
+        <a href="/chapters/{prev}">Previous Chapter</a>
+      {/if}
+			{#if !next}
 				<p style="text-align:right;">More Coming Soon!</p>
-			{:else if !nextChapter.published}
-				<p style="text-align:right;">More Coming Soon!</p>
-			{:else}<a href="chapters/{nextChapter.permalink}">Next Chapter - {nextChapter.title}</a>{/if}
+      {:else}
+        <a href="/chapters/{next}">Next Chapter </a>
+      {/if}
 		</section>
 	</article>
   {#if isMobile}

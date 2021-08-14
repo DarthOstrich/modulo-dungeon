@@ -71,8 +71,14 @@
 		</ul>
 	{:else}
 		<ul>
-			<a rel="prefetch" href="chapters/00-prologue">Prologue - The Traveler</a>
-			<Icon data={faCaretRight} scale="2" class="marker" />
+			<li>
+				<a rel="prefetch" href="chapters/prologue-the-traveler">Prologue - The Traveler</a>
+				<Icon data={faCaretRight} scale="2" class="marker" />
+			</li>
+			<li>
+				<a rel="prefetch" href="chapters/chapter-one-drawbridge">Chapter One - Drawbridge</a>
+				<Icon data={faCaretRight} scale="2" class="marker" />
+			</li>
 		</ul>
 	{/if}
 	<Support />

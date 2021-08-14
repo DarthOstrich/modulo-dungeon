@@ -37,9 +37,9 @@
   }
 </style>
 
-<section class={$$props.class}>
+<section>
   <header>
-    <img src="icon_heart.svg" alt="" />
+    <img src="/icon_heart.svg" alt="" />
     <h2>Support Project</h2>
   </header>
   <p>As you may know, streaming music pays pennies. If you enjoy this project, any coin you can spare will ensure the lights stay on after the music is done spinning.</p>
