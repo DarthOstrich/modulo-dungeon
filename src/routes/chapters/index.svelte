@@ -78,10 +78,10 @@
 
 	{#if chapters}
 		<ul>
-			{#each chapters as { published, slug, chapter, title, date, permalink }}
+			{#each chapters as { published, slug, chapter, title, date }}
 				{#if published}
 					<li>
-						<a rel="prefetch" href="chapters/{permalink}">{chapter} - {title}</a>
+						<a rel="prefetch" href="chapters/{slug}">{chapter} - {title}</a>
 						<Icon data={faCaretRight} scale="2" class="marker" />
 					</li>
 				{:else}
@@ -90,16 +90,7 @@
 			{/each}
 		</ul>
 	{:else}
-		<ul>
-			<li>
-				<a rel="prefetch" href="chapters/prologue-the-traveler">Prologue - The Traveler</a>
-				<Icon data={faCaretRight} scale="2" class="marker" />
-			</li>
-			<li>
-				<a rel="prefetch" href="chapters/chapter-one-drawbridge">Chapter One - Drawbridge</a>
-				<Icon data={faCaretRight} scale="2" class="marker" />
-			</li>
-		</ul>
+    <p>Nothing to show...</p>
 	{/if}
 	<Support />
 </section>
