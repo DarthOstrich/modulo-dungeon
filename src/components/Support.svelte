@@ -45,7 +45,7 @@
   <p>As you may know, streaming music pays pennies. If you enjoy this project, any coin you can spare will ensure the lights stay on after the music is done spinning.</p>
   <p>There’s a number of ways you can support this project. You can <a href="https://modulo.fanlink.to/traveler">stream or buy it on any of the major platforms</a>.</p>
   <figure>
-    <img src="mug.png" alt="mug of mead" class="icon" style="max-height: 50px;" />
+    <img src="/mug.png" alt="mug of mead" class="icon" style="max-height: 50px;" />
     <figcaption>You can also <a href="https://ko-fi.com/modulo">buy me a pint of mead.</a></figcaption>
   </figure>
 </section>
