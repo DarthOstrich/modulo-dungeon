@@ -1,8 +1,3 @@
-<script>
-  import { fade } from "svelte/transition";
-  import { firstLoad } from "../store/stores.js";
-</script>
-
 <style>
   h1,
   h2 {
@@ -78,11 +73,7 @@
   <meta name="twitter:image" content="dungeon-socials.jpg" />
 </svelte:head>
 
-<section class:selected={!$firstLoad}>
+<section>
   <h1>Into The Dungeon</h1>
   <a href="chapters/" class="start">Press Start</a>
 </section>
-
-{#if !$firstLoad}
-  <p in:fade>This story follows our heroine, Marceline, as she travels to an old castle in search of ancient treasure. You can read it with or without the audio accompaniment.</p>
-{/if}
