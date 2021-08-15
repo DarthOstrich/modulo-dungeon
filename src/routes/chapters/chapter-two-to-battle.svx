@@ -11,6 +11,7 @@ deezerID:
 published: true
 date: 2020-12-14
 prev: chapter-one-drawbridge
+next: chapter-three-the-library
 ---
 
 The air inside the castle was dense. Marceline's breath created clouds of mist that hung in the air momentarily before dissipating. She had been standing in the same spot for what seemed like hours, watching and listening.
