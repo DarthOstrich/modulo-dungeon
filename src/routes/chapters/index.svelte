@@ -66,7 +66,7 @@
 	<meta name="twitter:image" content="dungeon-socials.jpg" />
 </svelte:head>
 
-<section in:fade>
+<section in:fade|global>
 	<article>
 		<h1>Into The Dungeon</h1>
 		<p>

@@ -43,7 +43,7 @@
 	<meta name="twitter:image" content={img} />
 </svelte:head>
 
-<section in:fade>
+<section in:fade|global>
 	<header>
 		<h2>{chapter}</h2>
 		<h1>{title}</h1>
