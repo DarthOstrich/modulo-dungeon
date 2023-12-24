@@ -1,5 +1,4 @@
 ---
-layout: chapter
 num: 1
 chapter: Chapter 1
 title: Drawbridge

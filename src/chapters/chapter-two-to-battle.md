@@ -1,5 +1,4 @@
 ---
-layout: chapter
 num: 2
 chapter: Chapter 2
 title: To Battle!

@@ -75,9 +75,7 @@
       {:else}
         <a href="/chapters/{prev}">Previous Chapter</a>
       {/if}
-			{#if !next}
-				<p style="text-align:right;">More Coming Soon!</p>
-      {:else}
+			{#if next}
         <a href="/chapters/{next}">Next Chapter </a>
       {/if}
 		</section>

@@ -1,17 +1,16 @@
 ---
-layout: chapter
 num: 4
 chapter: Chapter 4
 title: The Curator
 slug: chapter-four-the-curator
-img: 02_Drawbridge-650.png
+img: 05_Curator-650.png
 appleID: 
 spotifyID: 
 deezerID:
 published: true
 date: 2020-11-09
 prev: chapter-three-the-library
-next:
+next: chapter-five-dark-library
 ---
 On the other side of the door was an empty room, save for a single large desk and a large figure sitting behind it. It was hunched over, reading a book several times larger than the one in her satchel.
 

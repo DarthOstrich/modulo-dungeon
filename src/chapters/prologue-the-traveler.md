@@ -1,5 +1,4 @@
 ---
-layout: chapter
 num: 0
 chapter: Prologue
 title: The Traveler

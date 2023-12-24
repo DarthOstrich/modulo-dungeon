@@ -1,5 +1,4 @@
 ---
-layout: chapter
 num: 3
 chapter: Chapter 3
 title: The Library
@@ -11,6 +10,7 @@ deezerID:
 published: true
 date: 2020-01-18
 prev: chapter-two-to-battle
+next: chapter-four-the-curator
 ---
 
 As the dust from the shattered bones settled on the floor around her, Marceline became aware of her breathing. It was labored and came in painful stabs. She ran her hand across her ribs and winced at a spot at the bottom of her ribcage. 
