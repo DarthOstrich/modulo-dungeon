@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fade } from 'svelte/transition';
   import Support from '../../../components/Support.svelte';
-  import { activeTrackURL, activeTrackIndex, activeTrackTitle } from '../../../store/stores';
+  import { audioPlayer, activeTrackURL, activeTrackIndex, activeTrackTitle } from '../../../store/stores';
 	import ChooseAudio from '../../../components/ChooseAudio.svelte';
   import Icon from 'svelte-awesome/components/Icon.svelte'
 	import { faPlay } from '@fortawesome/free-solid-svg-icons';
@@ -16,6 +16,10 @@
     activeTrackURL.update(src => src = slug)
     activeTrackTitle.update(src => src = newTrackTitle)
     activeTrackIndex.update(src => src = index)
+
+		$audioPlayer.src = `/${slug}.mp3`; 
+		// $audioPlayer.load();
+		$audioPlayer.play()
   }
 </script>
 
@@ -46,8 +50,8 @@
       <button 
         class="aside__playSong flex justify-center items-center"
         on:click={() => changeAudioTrack(slug, title, num)}>
-        <Icon data={faPlay} label="Play Song" class="mr-1" />
-        Play Song 
+          <Icon data={faPlay} label="Play Song" class="mr-1" />
+          Play Song 
       </button>
     </div>
     <div class="hidden md:block">
