@@ -153,7 +153,7 @@
 	@media (min-width: 768px) {
     section {
       display: grid;
-      grid-template-columns: 768px 1fr;
+      grid-template-columns: 70% 1fr;
       grid-template-rows: min-content 1fr;
       gap: 10px 10px;
       grid-template-areas:
