@@ -1,6 +1,7 @@
 export type Categories = 'sveltekit' | 'svelte';
 
 export type Chapter = {
+  chapter: string;
   layout: string;
   num: number;
   title: string;

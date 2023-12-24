@@ -11,6 +11,8 @@
   $: ({ chapter, title, img, prev, next, slug, num } = data.meta);
   $: ({ content } = data);
 
+  console.log(data)
+
   function changeAudioTrack(slug: string, title: string, index: number) {
     const newTrackTitle = `${chapter} - ${title}`;
     activeTrackURL.update(src => src = slug)
@@ -149,20 +151,16 @@
 		order: 3;
 	}
 	@media (min-width: 768px) {
-		section {
-			/* display: flex; */
-			/* flex-wrap: wrap; */
-			/* justify-content: space-between; */
-			/* flex-direction: row; */
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr;
-			grid-template-rows: 1fr;
-			gap: 10px 10px;
-			grid-template-areas:
-				'Header Header Aside'
-				'Content Content Aside'
-				'Content Content Aside'
-		}
+    section {
+      display: grid;
+      grid-template-columns: 768px 1fr;
+      grid-template-rows: min-content 1fr;
+      gap: 10px 10px;
+      grid-template-areas:
+       'Header Aside'
+       'Content Aside'
+       'Content Aside';
+    }
 		.content {
 			/* order: 2; */
 			/* flex-basis: calc(70% - 2rem); */

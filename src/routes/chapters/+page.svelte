@@ -31,20 +31,23 @@ export let data;
 	<meta name="twitter:image" content="dungeon-socials.jpg" />
 </svelte:head>
 
-<section in:fade>
+<section in:fade class="px-2">
 	<article>
 		<h1>Into The Dungeon</h1>
-		<p>
-			This story follows our heroine, Marceline, as she travels to an old castle in search of
-			ancient treasure. You can read it with or without the audio accompaniment.
-		</p>
+    <figure class="intro flex items-center flex-col md:flex-row">
+      <img class="intro__marceline" src="/03_ToBattle_marceline.png" alt="Marceline">
+      <figcaption>
+      This story follows our heroine, Marceline, as she travels to an old castle in search of
+      ancient treasure. You can read it with or without the audio accompaniment.
+      </figcaption>
+    </figure>
 	</article>
 	<h2>- Chapter Select -</h2>
 
 <section>
 	<ul class="chapters">
 		{#each data.chapters as chapter}
-			<li class="chapter">
+			<li class="chapter text-2xl">
 				<a href={'chapters/' + chapter.slug} class="title">{chapter.chapter} - {chapter.title}</a>
 			</li>
 		{/each}
@@ -81,7 +84,6 @@ export let data;
 
 	li {
 		font-family: 'VT323';
-		font-size: 2.4rem;
 		color: #636363;
 		list-style-type: none;
 		position: relative;
@@ -117,4 +119,8 @@ export let data;
 	article {
 		max-width: 700px;
 	}
+
+  .intro__marceline {
+    max-width: 100px;
+  }
 </style>
