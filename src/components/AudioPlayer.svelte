@@ -11,7 +11,7 @@
   bind:this={$audioPlayer}
   controls 
   class="">
-    <source src={"/" + $activeTrackURL + ".mp3"} type="audio/mpeg" />
+    <source src={"/audio/" + $activeTrackURL + ".mp3"} type="audio/mpeg" />
     <!-- <source src="horse.ogg" type="audio/ogg"> -->
     <!-- <source src="horse.mp3" type="audio/mpeg"> -->
     Your browser does not support the audio element.
