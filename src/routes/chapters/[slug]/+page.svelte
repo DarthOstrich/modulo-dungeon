@@ -19,7 +19,7 @@
     activeTrackTitle.update(src => src = newTrackTitle)
     activeTrackIndex.update(src => src = index)
 
-		$audioPlayer.src = `/${slug}.mp3`; 
+		$audioPlayer.src = `/audio/${slug}.mp3`; 
 		// $audioPlayer.load();
 		$audioPlayer.play()
   }

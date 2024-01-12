@@ -10,7 +10,7 @@ deezerID:
 published: true
 date: 2020-11-09
 prev: chapter-five-dark-library
-next:
+next: chapter-seven-into-the-dungeon
 ---
 Marceline left the Library again and re-entered the room where the Curator lay defeated. She only glanced at the figure on the ground, but she could have sworn it was just a bunched clump of empty clothes. Shaking her head, she quickly moved past the desk and opened the door on the far side.
 
