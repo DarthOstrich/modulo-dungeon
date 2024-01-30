@@ -1,6 +1,6 @@
 <script>
   import Icon from 'svelte-awesome/components/Icon.svelte'
-  import { faSpotify, faApple, faDeezer } from '@fortawesome/free-brands-svg-icons';
+  import { faSpotify, faApple, faDeezer, faBandcamp } from '@fortawesome/free-brands-svg-icons';
 
 
   function changeAudioSrc(value) {
@@ -11,9 +11,10 @@
 <section>
   <h2>Stream Audio</h2>
   <ul>
-    <li><a href="https://modulo.fanlink.to/traveler"><Icon data={faSpotify} label="Spotify" scale=3 /></a></li>
-    <li><a href="https://modulo.fanlink.to/traveler"><Icon data={faApple} label="Spotify" scale=3 /></a></li>
-    <li><a href="https://modulo.fanlink.to/traveler"><Icon data={faDeezer} label="Spotify" scale=3 /></a></li>
+    <li><a href="https://modulo.fanlink.to/into-the-dungeon"><Icon data={faSpotify} label="Spotify" scale=3 /></a></li>
+    <li><a href="https://modulo.fanlink.to/into-the-dungeon"><Icon data={faApple} label="Apple" scale=3 /></a></li>
+    <li><a href="https://modulo.fanlink.to/into-the-dungeon"><Icon data={faDeezer} label="Deezer" scale=3 /></a></li>
+    <li><a href="https://modulo.fanlink.to/into-the-dungeon"><Icon data={faBandcamp} label="Bandcamp" scale=3 /></a></li>
   </ul>
 </section>
 
